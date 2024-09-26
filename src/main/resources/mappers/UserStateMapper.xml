@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sw.starcraft.domain.userstate.repository.UserStateMapper">
+
+    <select id="findAllUserStates" resultType="UserStateDTO">
+        SELECT * FROM USER_STATES;
+    </select>
+
+    <select id="findUserStateIdByState" resultType="int">
+        SELECT id FROM USER_STATES WHERE state = #{findState};
+    </select>
+
+</mapper>
